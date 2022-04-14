@@ -46,7 +46,7 @@ $userId = $user->getCurrentUserId();
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
@@ -71,14 +71,14 @@ $userId = $user->getCurrentUserId();
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
                         </li>
                         <li>
                             <div class="dropdown">
-                                <i class="fas fa-user" target="_blank"></i>
+                                <i class="fas fa-user"></i>
                                 My Account
                                 <div class="dropdown-content">
                                     <a href="login.php">Log In</a>

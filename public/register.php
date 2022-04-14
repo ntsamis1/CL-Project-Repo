@@ -34,7 +34,7 @@ if (!empty(User::getCurrentUserId())) {
             <div class="primary-menu text-right">
                 <ul>
                     <li>
-                        <a href="index.php" target="_blank">
+                        <a href="index.php">
                             <i class="fas fa-home"></i>
                             Home
                         </a>

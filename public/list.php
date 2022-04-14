@@ -68,7 +68,7 @@ $maxPrice = $room->getMaxPrice();
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
@@ -93,14 +93,14 @@ $maxPrice = $room->getMaxPrice();
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
                         </li>
                         <li>
                             <div class="dropdown">
-                                <i class="fas fa-user" target="_blank"></i>
+                                <i class="fas fa-user"></i>
                                 My Account
                                 <div class="dropdown-content">
                                     <a href="login.php">Log In</a>
@@ -150,7 +150,8 @@ $maxPrice = $room->getMaxPrice();
                             </div>
                             <div class="grid-item">
                                 <label for="city"></label>
-                                <select name="city" placeholder="City">
+                                <select name="city">
+                                    <option value="" disabled selected hidden>Select City</option>
                                     <?php
                                     foreach ($cities as $city) {
                                     ?>
@@ -185,11 +186,11 @@ $maxPrice = $room->getMaxPrice();
                             </div>
                             <div class="grid-item">
                                 <label for="check-in"></label>
-                                <input placeholder="<?php echo $checkInDate ?>" name="check_in_date" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
+                                <input value="<?php echo $checkInDate ?>" placeholder="<?php echo $checkInDate ?>" name="check_in_date" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
                             </div>
                             <div class="grid-item">
                                 <label for="check-out"></label>
-                                <input placeholder="<?php echo $checkOutDate ?>" name="check_out_date" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
+                                <input value="<?php echo $checkOutDate ?>" placeholder="<?php echo $checkOutDate ?>" name="check_out_date" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
                             </div>
                             <div class="action text-center">
                                 <input type="submit" value="Find Hotels">

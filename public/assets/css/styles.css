@@ -247,6 +247,13 @@ input[type="email"] {
 
 /**  Login Page */
 
+.error-notice {
+  background: red;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+}
+
 .hero-login form .input-wrapper {
   display: flex;
   flex-direction: column;
@@ -259,6 +266,7 @@ input[type="email"] {
   flex-direction: column;
   row-gap: 27px;
   grid-row-gap: 27px;
+  width: 100%;
 }
 
 .hero-login {
@@ -422,6 +430,39 @@ span.psw {
 .container-room .room-details-btn {
   width: 25%;
   float: right;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "RobotoL";
+  border-radius: 3px;
+  padding: 10px 89px;
+  background: #f50;
+  background-size: 18px;
+  color: #fff;
+  outline: none;
+}
+
+.container-room .room-details-btn-booked {
+  width: 25%;
+  float: right;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "RobotoL";
+  border-radius: 3px;
+  padding: 10px 89px;
+  background: rgb(235, 88, 88);
+  background-size: 18px;
+  color: #fff;
+  outline: none;
 }
 
 .user-review {

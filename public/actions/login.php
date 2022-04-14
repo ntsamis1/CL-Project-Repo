@@ -19,8 +19,7 @@ if (!empty(User::getCurrentUserId())) {
 $user = new User();
 try {
     if (!$user->verify($_REQUEST['email'], $_REQUEST['password'])) {
-        echo 'invalid username or password';
-        header("location: /public/login.php");
+        header("location: /public/login.php?error='invalid-credentials'");
     } else {
         $userInfo = $user->getByEmail($_REQUEST['email']);
         $token = $user->generateToken($userInfo['user_id']);

@@ -34,7 +34,7 @@ if (!empty(User::getCurrentUserId())) {
             <div class="primary-menu text-right">
                 <ul>
                     <li>
-                        <a href="index.php" target="_blank">
+                        <a href="index.php">
                             <i class="fas fa-home"></i>
                             Home
                         </a>
@@ -46,37 +46,29 @@ if (!empty(User::getCurrentUserId())) {
     <main>
         <section class="hero-login">
             <div class="container">
-                <form action="/public/actions/login.php" method="post">
-                    <?php if (!empty($_GET['error'])) { ?>
-                        <div class="alert alert-danger alert-styled-left">Login Error</div>
-                    <?php } ?>
+                <form id="login-form" action="/public/actions/login.php" method="post">
                     <div class="container form-login">
-                        <form action="/public/login.php" method="get">
-                            <div class="input-wrapper">
-
-                                <label for="Email"><b>Email</b></label>
-                                <input id="email" type="input" placeholder="Email" name="email" required>
-                                <div class="email-error error">Must be a valid email address!</div>
-
+                        <?php if ($_GET['error']) : ?>
+                            <p class="error-notice">Invalid Credentials</p>
+                        <?php endif; ?>
+                        <div class="input-wrapper">
+                            <label for="Email"><b>Email</b></label>
+                            <input id="email" type="input" placeholder="Email" name="email" required>
+                            <div class="email-error error">Must be a valid email address!</div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="password"><b>Password</b></label>
+                            <input id="password" type="password" placeholder="Enter Password" name="password" required>
+                            <div class="password-error error">
+                                Must contain more than 4 characters!
                             </div>
-
-                            <div class="input-wrapper">
-
-                                <label for="password"><b>Password</b></label>
-                                <input id="password" type="password" placeholder="Enter Password" name="password" required>
-                                <div class="password-error error">
-                                    Must contain more than 4 characters!
-                                </div>
-
-                            </div>
-                            <label class="checkbox">
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
-                            <!-- <button type="submit" value="login" name="login">Login</button> -->
-                            <button id="login" type="submit" class="submit-btn" disabled="disabled">LogIn</button>
-                            <button type="button" class="cancelbtn">Cancel</button>
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        </form>
+                        </div>
+                        <label class="checkbox">
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                        <button id="login" type="submit" class="submit-btn" disabled="disabled">LogIn</button>
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
                 </form>
         </section>

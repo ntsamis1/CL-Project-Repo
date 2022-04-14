@@ -100,9 +100,11 @@ class Room extends BaseService
         $sql .= 'room_id NOT IN (
             SELECT room_id 
             FROM booking 
-            WHERE check_out_date <= :check_in_date OR check_in_date >= :check_out_date
+            WHERE check_in_date <= :check_out_date AND check_out_date >= :check_in_date
         )';
         //get results
         return $this->fetchAll($sql, $parameters);
     }
 }
+
+// WHERE check_out_date <= :check_in_date OR check_in_date >= :check_out_date

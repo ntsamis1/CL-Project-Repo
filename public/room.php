@@ -83,7 +83,7 @@ $isBooked = $booking->isBooked($roomId, $checkIn, $checkOut);
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
@@ -108,14 +108,14 @@ $isBooked = $booking->isBooked($roomId, $checkIn, $checkOut);
                 <div class="primary-menu text-right">
                     <ul>
                         <li>
-                            <a href="index.php" target="_blank">
+                            <a href="index.php">
                                 <i class="fas fa-home"></i>
                                 Home
                             </a>
                         </li>
                         <li>
                             <div class="dropdown">
-                                <i class="fas fa-user" target="_blank"></i>
+                                <i class="fas fa-user"></i>
                                 My Account
                                 <div class="dropdown-content">
                                     <a href="login.php">Log In</a>
@@ -206,9 +206,6 @@ $isBooked = $booking->isBooked($roomId, $checkIn, $checkOut);
                 <input type="hidden" name="room_id" value="<?php echo $roomId ?>" />
                 <input type="hidden" name="check_in_date" value="<?php echo $checkIn ?>" />
                 <input type="hidden" name="check_out_date" value="<?php echo $checkOut ?>" />
-                <?php if (!empty($_GET['error'])) { ?>
-                    <div class="alert alert-danger alert-styled-left">Register Error</div>
-                <?php } ?>
                 <button type="submit" class="room-details-btn">Book Now</button>
             </form>
         <?php } ?>
